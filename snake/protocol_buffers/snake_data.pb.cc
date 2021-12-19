@@ -17,124 +17,149 @@
 
 PROTOBUF_PRAGMA_INIT_SEG
 namespace snake_data {
-constexpr board::board(
+constexpr Board::Board(
   ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
   : feeds_()
   , users_(){}
-struct boardDefaultTypeInternal {
-  constexpr boardDefaultTypeInternal()
+struct BoardDefaultTypeInternal {
+  constexpr BoardDefaultTypeInternal()
     : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
-  ~boardDefaultTypeInternal() {}
+  ~BoardDefaultTypeInternal() {}
   union {
-    board _instance;
+    Board _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT boardDefaultTypeInternal _board_default_instance_;
-constexpr coordinate::coordinate(
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT BoardDefaultTypeInternal _Board_default_instance_;
+constexpr Coordinate::Coordinate(
   ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
   : x_(0)
   , y_(0){}
-struct coordinateDefaultTypeInternal {
-  constexpr coordinateDefaultTypeInternal()
+struct CoordinateDefaultTypeInternal {
+  constexpr CoordinateDefaultTypeInternal()
     : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
-  ~coordinateDefaultTypeInternal() {}
+  ~CoordinateDefaultTypeInternal() {}
   union {
-    coordinate _instance;
+    Coordinate _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT coordinateDefaultTypeInternal _coordinate_default_instance_;
-constexpr feed::feed(
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT CoordinateDefaultTypeInternal _Coordinate_default_instance_;
+constexpr Feed::Feed(
   ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
   : point_(nullptr){}
-struct feedDefaultTypeInternal {
-  constexpr feedDefaultTypeInternal()
+struct FeedDefaultTypeInternal {
+  constexpr FeedDefaultTypeInternal()
     : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
-  ~feedDefaultTypeInternal() {}
+  ~FeedDefaultTypeInternal() {}
   union {
-    feed _instance;
+    Feed _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT feedDefaultTypeInternal _feed_default_instance_;
-constexpr user::user(
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT FeedDefaultTypeInternal _Feed_default_instance_;
+constexpr Snake::Snake(
   ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
   : points_()
-  , name_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
-  , owner_flag_(false){}
-struct userDefaultTypeInternal {
-  constexpr userDefaultTypeInternal()
+  , length_(0){}
+struct SnakeDefaultTypeInternal {
+  constexpr SnakeDefaultTypeInternal()
     : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
-  ~userDefaultTypeInternal() {}
+  ~SnakeDefaultTypeInternal() {}
   union {
-    user _instance;
+    Snake _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT userDefaultTypeInternal _user_default_instance_;
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT SnakeDefaultTypeInternal _Snake_default_instance_;
+constexpr User::User(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : name_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , snake_(nullptr)
+  , owner_flag_(false){}
+struct UserDefaultTypeInternal {
+  constexpr UserDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~UserDefaultTypeInternal() {}
+  union {
+    User _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT UserDefaultTypeInternal _User_default_instance_;
 }  // namespace snake_data
-static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_snake_5fdata_2eproto[4];
+static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_snake_5fdata_2eproto[5];
 static constexpr ::PROTOBUF_NAMESPACE_ID::EnumDescriptor const** file_level_enum_descriptors_snake_5fdata_2eproto = nullptr;
 static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_snake_5fdata_2eproto = nullptr;
 
 const uint32_t TableStruct_snake_5fdata_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::snake_data::board, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::snake_data::Board, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::snake_data::board, feeds_),
-  PROTOBUF_FIELD_OFFSET(::snake_data::board, users_),
+  PROTOBUF_FIELD_OFFSET(::snake_data::Board, feeds_),
+  PROTOBUF_FIELD_OFFSET(::snake_data::Board, users_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::snake_data::coordinate, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::snake_data::Coordinate, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::snake_data::coordinate, x_),
-  PROTOBUF_FIELD_OFFSET(::snake_data::coordinate, y_),
+  PROTOBUF_FIELD_OFFSET(::snake_data::Coordinate, x_),
+  PROTOBUF_FIELD_OFFSET(::snake_data::Coordinate, y_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::snake_data::feed, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::snake_data::Feed, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::snake_data::feed, point_),
+  PROTOBUF_FIELD_OFFSET(::snake_data::Feed, point_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::snake_data::user, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::snake_data::Snake, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::snake_data::user, name_),
-  PROTOBUF_FIELD_OFFSET(::snake_data::user, owner_flag_),
-  PROTOBUF_FIELD_OFFSET(::snake_data::user, points_),
+  PROTOBUF_FIELD_OFFSET(::snake_data::Snake, length_),
+  PROTOBUF_FIELD_OFFSET(::snake_data::Snake, points_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::snake_data::User, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::snake_data::User, name_),
+  PROTOBUF_FIELD_OFFSET(::snake_data::User, owner_flag_),
+  PROTOBUF_FIELD_OFFSET(::snake_data::User, snake_),
 };
 static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, -1, sizeof(::snake_data::board)},
-  { 8, -1, -1, sizeof(::snake_data::coordinate)},
-  { 16, -1, -1, sizeof(::snake_data::feed)},
-  { 23, -1, -1, sizeof(::snake_data::user)},
+  { 0, -1, -1, sizeof(::snake_data::Board)},
+  { 8, -1, -1, sizeof(::snake_data::Coordinate)},
+  { 16, -1, -1, sizeof(::snake_data::Feed)},
+  { 23, -1, -1, sizeof(::snake_data::Snake)},
+  { 31, -1, -1, sizeof(::snake_data::User)},
 };
 
 static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::snake_data::_board_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::snake_data::_coordinate_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::snake_data::_feed_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::snake_data::_user_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::snake_data::_Board_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::snake_data::_Coordinate_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::snake_data::_Feed_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::snake_data::_Snake_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::snake_data::_User_default_instance_),
 };
 
 const char descriptor_table_protodef_snake_5fdata_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
-  "\n\020snake_data.proto\022\nsnake_data\"I\n\005board\022"
-  "\037\n\005feeds\030\001 \003(\0132\020.snake_data.feed\022\037\n\005user"
-  "s\030\002 \003(\0132\020.snake_data.user\"\"\n\ncoordinate\022"
-  "\t\n\001x\030\001 \001(\005\022\t\n\001y\030\002 \001(\005\"-\n\004feed\022%\n\005point\030\001"
-  " \001(\0132\026.snake_data.coordinate\"P\n\004user\022\014\n\004"
-  "name\030\001 \001(\t\022\022\n\nowner_flag\030\002 \001(\010\022&\n\006points"
-  "\030\003 \003(\0132\026.snake_data.coordinateb\006proto3"
+  "\n\020snake_data.proto\022\nsnake_data\"I\n\005Board\022"
+  "\037\n\005feeds\030\001 \003(\0132\020.snake_data.Feed\022\037\n\005user"
+  "s\030\002 \003(\0132\020.snake_data.User\"\"\n\nCoordinate\022"
+  "\t\n\001x\030\001 \001(\005\022\t\n\001y\030\002 \001(\005\"-\n\004Feed\022%\n\005point\030\001"
+  " \001(\0132\026.snake_data.Coordinate\"\?\n\005Snake\022\016\n"
+  "\006length\030\001 \001(\005\022&\n\006points\030\002 \003(\0132\026.snake_da"
+  "ta.Coordinate\"J\n\004User\022\014\n\004name\030\001 \001(\t\022\022\n\no"
+  "wner_flag\030\002 \001(\010\022 \n\005snake\030\003 \001(\0132\021.snake_d"
+  "ata.Snakeb\006proto3"
   ;
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_snake_5fdata_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_snake_5fdata_2eproto = {
-  false, false, 278, descriptor_table_protodef_snake_5fdata_2eproto, "snake_data.proto", 
-  &descriptor_table_snake_5fdata_2eproto_once, nullptr, 0, 4,
+  false, false, 337, descriptor_table_protodef_snake_5fdata_2eproto, "snake_data.proto", 
+  &descriptor_table_snake_5fdata_2eproto_once, nullptr, 0, 5,
   schemas, file_default_instances, TableStruct_snake_5fdata_2eproto::offsets,
   file_level_metadata_snake_5fdata_2eproto, file_level_enum_descriptors_snake_5fdata_2eproto, file_level_service_descriptors_snake_5fdata_2eproto,
 };
@@ -148,11 +173,11 @@ namespace snake_data {
 
 // ===================================================================
 
-class board::_Internal {
+class Board::_Internal {
  public:
 };
 
-board::board(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+Board::Board(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned),
   feeds_(arena),
@@ -161,42 +186,42 @@ board::board(::PROTOBUF_NAMESPACE_ID::Arena* arena,
   if (!is_message_owned) {
     RegisterArenaDtor(arena);
   }
-  // @@protoc_insertion_point(arena_constructor:snake_data.board)
+  // @@protoc_insertion_point(arena_constructor:snake_data.Board)
 }
-board::board(const board& from)
+Board::Board(const Board& from)
   : ::PROTOBUF_NAMESPACE_ID::Message(),
       feeds_(from.feeds_),
       users_(from.users_) {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  // @@protoc_insertion_point(copy_constructor:snake_data.board)
+  // @@protoc_insertion_point(copy_constructor:snake_data.Board)
 }
 
-inline void board::SharedCtor() {
+inline void Board::SharedCtor() {
 }
 
-board::~board() {
-  // @@protoc_insertion_point(destructor:snake_data.board)
+Board::~Board() {
+  // @@protoc_insertion_point(destructor:snake_data.Board)
   if (GetArenaForAllocation() != nullptr) return;
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-inline void board::SharedDtor() {
+inline void Board::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
 }
 
-void board::ArenaDtor(void* object) {
-  board* _this = reinterpret_cast< board* >(object);
+void Board::ArenaDtor(void* object) {
+  Board* _this = reinterpret_cast< Board* >(object);
   (void)_this;
 }
-void board::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+void Board::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
 }
-void board::SetCachedSize(int size) const {
+void Board::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
 
-void board::Clear() {
-// @@protoc_insertion_point(message_clear_start:snake_data.board)
+void Board::Clear() {
+// @@protoc_insertion_point(message_clear_start:snake_data.Board)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -206,13 +231,13 @@ void board::Clear() {
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* board::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* Board::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // repeated .snake_data.feed feeds = 1;
+      // repeated .snake_data.Feed feeds = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr -= 1;
@@ -225,7 +250,7 @@ const char* board::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::inte
         } else
           goto handle_unusual;
         continue;
-      // repeated .snake_data.user users = 2;
+      // repeated .snake_data.User users = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           ptr -= 1;
@@ -261,13 +286,13 @@ failure:
 #undef CHK_
 }
 
-uint8_t* board::_InternalSerialize(
+uint8_t* Board::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:snake_data.board)
+  // @@protoc_insertion_point(serialize_to_array_start:snake_data.Board)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // repeated .snake_data.feed feeds = 1;
+  // repeated .snake_data.Feed feeds = 1;
   for (unsigned int i = 0,
       n = static_cast<unsigned int>(this->_internal_feeds_size()); i < n; i++) {
     target = stream->EnsureSpace(target);
@@ -275,7 +300,7 @@ uint8_t* board::_InternalSerialize(
       InternalWriteMessage(1, this->_internal_feeds(i), target, stream);
   }
 
-  // repeated .snake_data.user users = 2;
+  // repeated .snake_data.User users = 2;
   for (unsigned int i = 0,
       n = static_cast<unsigned int>(this->_internal_users_size()); i < n; i++) {
     target = stream->EnsureSpace(target);
@@ -287,26 +312,26 @@ uint8_t* board::_InternalSerialize(
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:snake_data.board)
+  // @@protoc_insertion_point(serialize_to_array_end:snake_data.Board)
   return target;
 }
 
-size_t board::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:snake_data.board)
+size_t Board::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:snake_data.Board)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated .snake_data.feed feeds = 1;
+  // repeated .snake_data.Feed feeds = 1;
   total_size += 1UL * this->_internal_feeds_size();
   for (const auto& msg : this->feeds_) {
     total_size +=
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
-  // repeated .snake_data.user users = 2;
+  // repeated .snake_data.User users = 2;
   total_size += 1UL * this->_internal_users_size();
   for (const auto& msg : this->users_) {
     total_size +=
@@ -316,21 +341,21 @@ size_t board::ByteSizeLong() const {
   return MaybeComputeUnknownFieldsSize(total_size, &_cached_size_);
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData board::_class_data_ = {
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Board::_class_data_ = {
     ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
-    board::MergeImpl
+    Board::MergeImpl
 };
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*board::GetClassData() const { return &_class_data_; }
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Board::GetClassData() const { return &_class_data_; }
 
-void board::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
+void Board::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
                       const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-  static_cast<board *>(to)->MergeFrom(
-      static_cast<const board &>(from));
+  static_cast<Board *>(to)->MergeFrom(
+      static_cast<const Board &>(from));
 }
 
 
-void board::MergeFrom(const board& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:snake_data.board)
+void Board::MergeFrom(const Board& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:snake_data.Board)
   GOOGLE_DCHECK_NE(&from, this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -340,25 +365,25 @@ void board::MergeFrom(const board& from) {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
-void board::CopyFrom(const board& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:snake_data.board)
+void Board::CopyFrom(const Board& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:snake_data.Board)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-bool board::IsInitialized() const {
+bool Board::IsInitialized() const {
   return true;
 }
 
-void board::InternalSwap(board* other) {
+void Board::InternalSwap(Board* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   feeds_.InternalSwap(&other->feeds_);
   users_.InternalSwap(&other->users_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata board::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata Board::GetMetadata() const {
   return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
       &descriptor_table_snake_5fdata_2eproto_getter, &descriptor_table_snake_5fdata_2eproto_once,
       file_level_metadata_snake_5fdata_2eproto[0]);
@@ -366,58 +391,58 @@ void board::InternalSwap(board* other) {
 
 // ===================================================================
 
-class coordinate::_Internal {
+class Coordinate::_Internal {
  public:
 };
 
-coordinate::coordinate(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+Coordinate::Coordinate(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor();
   if (!is_message_owned) {
     RegisterArenaDtor(arena);
   }
-  // @@protoc_insertion_point(arena_constructor:snake_data.coordinate)
+  // @@protoc_insertion_point(arena_constructor:snake_data.Coordinate)
 }
-coordinate::coordinate(const coordinate& from)
+Coordinate::Coordinate(const Coordinate& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   ::memcpy(&x_, &from.x_,
     static_cast<size_t>(reinterpret_cast<char*>(&y_) -
     reinterpret_cast<char*>(&x_)) + sizeof(y_));
-  // @@protoc_insertion_point(copy_constructor:snake_data.coordinate)
+  // @@protoc_insertion_point(copy_constructor:snake_data.Coordinate)
 }
 
-inline void coordinate::SharedCtor() {
+inline void Coordinate::SharedCtor() {
 ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
     reinterpret_cast<char*>(&x_) - reinterpret_cast<char*>(this)),
     0, static_cast<size_t>(reinterpret_cast<char*>(&y_) -
     reinterpret_cast<char*>(&x_)) + sizeof(y_));
 }
 
-coordinate::~coordinate() {
-  // @@protoc_insertion_point(destructor:snake_data.coordinate)
+Coordinate::~Coordinate() {
+  // @@protoc_insertion_point(destructor:snake_data.Coordinate)
   if (GetArenaForAllocation() != nullptr) return;
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-inline void coordinate::SharedDtor() {
+inline void Coordinate::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
 }
 
-void coordinate::ArenaDtor(void* object) {
-  coordinate* _this = reinterpret_cast< coordinate* >(object);
+void Coordinate::ArenaDtor(void* object) {
+  Coordinate* _this = reinterpret_cast< Coordinate* >(object);
   (void)_this;
 }
-void coordinate::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+void Coordinate::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
 }
-void coordinate::SetCachedSize(int size) const {
+void Coordinate::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
 
-void coordinate::Clear() {
-// @@protoc_insertion_point(message_clear_start:snake_data.coordinate)
+void Coordinate::Clear() {
+// @@protoc_insertion_point(message_clear_start:snake_data.Coordinate)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -428,7 +453,7 @@ void coordinate::Clear() {
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* coordinate::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* Coordinate::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
@@ -473,9 +498,9 @@ failure:
 #undef CHK_
 }
 
-uint8_t* coordinate::_InternalSerialize(
+uint8_t* Coordinate::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:snake_data.coordinate)
+  // @@protoc_insertion_point(serialize_to_array_start:snake_data.Coordinate)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -495,12 +520,12 @@ uint8_t* coordinate::_InternalSerialize(
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:snake_data.coordinate)
+  // @@protoc_insertion_point(serialize_to_array_end:snake_data.Coordinate)
   return target;
 }
 
-size_t coordinate::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:snake_data.coordinate)
+size_t Coordinate::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:snake_data.Coordinate)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
@@ -520,21 +545,21 @@ size_t coordinate::ByteSizeLong() const {
   return MaybeComputeUnknownFieldsSize(total_size, &_cached_size_);
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData coordinate::_class_data_ = {
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Coordinate::_class_data_ = {
     ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
-    coordinate::MergeImpl
+    Coordinate::MergeImpl
 };
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*coordinate::GetClassData() const { return &_class_data_; }
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Coordinate::GetClassData() const { return &_class_data_; }
 
-void coordinate::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
+void Coordinate::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
                       const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-  static_cast<coordinate *>(to)->MergeFrom(
-      static_cast<const coordinate &>(from));
+  static_cast<Coordinate *>(to)->MergeFrom(
+      static_cast<const Coordinate &>(from));
 }
 
 
-void coordinate::MergeFrom(const coordinate& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:snake_data.coordinate)
+void Coordinate::MergeFrom(const Coordinate& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:snake_data.Coordinate)
   GOOGLE_DCHECK_NE(&from, this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -548,29 +573,29 @@ void coordinate::MergeFrom(const coordinate& from) {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
-void coordinate::CopyFrom(const coordinate& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:snake_data.coordinate)
+void Coordinate::CopyFrom(const Coordinate& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:snake_data.Coordinate)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-bool coordinate::IsInitialized() const {
+bool Coordinate::IsInitialized() const {
   return true;
 }
 
-void coordinate::InternalSwap(coordinate* other) {
+void Coordinate::InternalSwap(Coordinate* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(coordinate, y_)
-      + sizeof(coordinate::y_)
-      - PROTOBUF_FIELD_OFFSET(coordinate, x_)>(
+      PROTOBUF_FIELD_OFFSET(Coordinate, y_)
+      + sizeof(Coordinate::y_)
+      - PROTOBUF_FIELD_OFFSET(Coordinate, x_)>(
           reinterpret_cast<char*>(&x_),
           reinterpret_cast<char*>(&other->x_));
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata coordinate::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata Coordinate::GetMetadata() const {
   return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
       &descriptor_table_snake_5fdata_2eproto_getter, &descriptor_table_snake_5fdata_2eproto_once,
       file_level_metadata_snake_5fdata_2eproto[1]);
@@ -578,63 +603,63 @@ void coordinate::InternalSwap(coordinate* other) {
 
 // ===================================================================
 
-class feed::_Internal {
+class Feed::_Internal {
  public:
-  static const ::snake_data::coordinate& point(const feed* msg);
+  static const ::snake_data::Coordinate& point(const Feed* msg);
 };
 
-const ::snake_data::coordinate&
-feed::_Internal::point(const feed* msg) {
+const ::snake_data::Coordinate&
+Feed::_Internal::point(const Feed* msg) {
   return *msg->point_;
 }
-feed::feed(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+Feed::Feed(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor();
   if (!is_message_owned) {
     RegisterArenaDtor(arena);
   }
-  // @@protoc_insertion_point(arena_constructor:snake_data.feed)
+  // @@protoc_insertion_point(arena_constructor:snake_data.Feed)
 }
-feed::feed(const feed& from)
+Feed::Feed(const Feed& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_point()) {
-    point_ = new ::snake_data::coordinate(*from.point_);
+    point_ = new ::snake_data::Coordinate(*from.point_);
   } else {
     point_ = nullptr;
   }
-  // @@protoc_insertion_point(copy_constructor:snake_data.feed)
+  // @@protoc_insertion_point(copy_constructor:snake_data.Feed)
 }
 
-inline void feed::SharedCtor() {
+inline void Feed::SharedCtor() {
 point_ = nullptr;
 }
 
-feed::~feed() {
-  // @@protoc_insertion_point(destructor:snake_data.feed)
+Feed::~Feed() {
+  // @@protoc_insertion_point(destructor:snake_data.Feed)
   if (GetArenaForAllocation() != nullptr) return;
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-inline void feed::SharedDtor() {
+inline void Feed::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
   if (this != internal_default_instance()) delete point_;
 }
 
-void feed::ArenaDtor(void* object) {
-  feed* _this = reinterpret_cast< feed* >(object);
+void Feed::ArenaDtor(void* object) {
+  Feed* _this = reinterpret_cast< Feed* >(object);
   (void)_this;
 }
-void feed::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+void Feed::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
 }
-void feed::SetCachedSize(int size) const {
+void Feed::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
 
-void feed::Clear() {
-// @@protoc_insertion_point(message_clear_start:snake_data.feed)
+void Feed::Clear() {
+// @@protoc_insertion_point(message_clear_start:snake_data.Feed)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -646,13 +671,13 @@ void feed::Clear() {
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* feed::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* Feed::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // .snake_data.coordinate point = 1;
+      // .snake_data.Coordinate point = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_point(), ptr);
@@ -683,13 +708,13 @@ failure:
 #undef CHK_
 }
 
-uint8_t* feed::_InternalSerialize(
+uint8_t* Feed::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:snake_data.feed)
+  // @@protoc_insertion_point(serialize_to_array_start:snake_data.Feed)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .snake_data.coordinate point = 1;
+  // .snake_data.Coordinate point = 1;
   if (this->_internal_has_point()) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
@@ -701,19 +726,19 @@ uint8_t* feed::_InternalSerialize(
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:snake_data.feed)
+  // @@protoc_insertion_point(serialize_to_array_end:snake_data.Feed)
   return target;
 }
 
-size_t feed::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:snake_data.feed)
+size_t Feed::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:snake_data.Feed)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // .snake_data.coordinate point = 1;
+  // .snake_data.Coordinate point = 1;
   if (this->_internal_has_point()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
@@ -723,49 +748,49 @@ size_t feed::ByteSizeLong() const {
   return MaybeComputeUnknownFieldsSize(total_size, &_cached_size_);
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData feed::_class_data_ = {
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Feed::_class_data_ = {
     ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
-    feed::MergeImpl
+    Feed::MergeImpl
 };
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*feed::GetClassData() const { return &_class_data_; }
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Feed::GetClassData() const { return &_class_data_; }
 
-void feed::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
+void Feed::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
                       const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-  static_cast<feed *>(to)->MergeFrom(
-      static_cast<const feed &>(from));
+  static_cast<Feed *>(to)->MergeFrom(
+      static_cast<const Feed &>(from));
 }
 
 
-void feed::MergeFrom(const feed& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:snake_data.feed)
+void Feed::MergeFrom(const Feed& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:snake_data.Feed)
   GOOGLE_DCHECK_NE(&from, this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from._internal_has_point()) {
-    _internal_mutable_point()->::snake_data::coordinate::MergeFrom(from._internal_point());
+    _internal_mutable_point()->::snake_data::Coordinate::MergeFrom(from._internal_point());
   }
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
-void feed::CopyFrom(const feed& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:snake_data.feed)
+void Feed::CopyFrom(const Feed& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:snake_data.Feed)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-bool feed::IsInitialized() const {
+bool Feed::IsInitialized() const {
   return true;
 }
 
-void feed::InternalSwap(feed* other) {
+void Feed::InternalSwap(Feed* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(point_, other->point_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata feed::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata Feed::GetMetadata() const {
   return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
       &descriptor_table_snake_5fdata_2eproto_getter, &descriptor_table_snake_5fdata_2eproto_once,
       file_level_metadata_snake_5fdata_2eproto[2]);
@@ -773,11 +798,11 @@ void feed::InternalSwap(feed* other) {
 
 // ===================================================================
 
-class user::_Internal {
+class Snake::_Internal {
  public:
 };
 
-user::user(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+Snake::Snake(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned),
   points_(arena) {
@@ -785,100 +810,76 @@ user::user(::PROTOBUF_NAMESPACE_ID::Arena* arena,
   if (!is_message_owned) {
     RegisterArenaDtor(arena);
   }
-  // @@protoc_insertion_point(arena_constructor:snake_data.user)
+  // @@protoc_insertion_point(arena_constructor:snake_data.Snake)
 }
-user::user(const user& from)
+Snake::Snake(const Snake& from)
   : ::PROTOBUF_NAMESPACE_ID::Message(),
       points_(from.points_) {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    name_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), "", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_name().empty()) {
-    name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_name(), 
-      GetArenaForAllocation());
-  }
-  owner_flag_ = from.owner_flag_;
-  // @@protoc_insertion_point(copy_constructor:snake_data.user)
+  length_ = from.length_;
+  // @@protoc_insertion_point(copy_constructor:snake_data.Snake)
 }
 
-inline void user::SharedCtor() {
-name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  name_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), "", GetArenaForAllocation());
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-owner_flag_ = false;
+inline void Snake::SharedCtor() {
+length_ = 0;
 }
 
-user::~user() {
-  // @@protoc_insertion_point(destructor:snake_data.user)
+Snake::~Snake() {
+  // @@protoc_insertion_point(destructor:snake_data.Snake)
   if (GetArenaForAllocation() != nullptr) return;
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-inline void user::SharedDtor() {
+inline void Snake::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  name_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
-void user::ArenaDtor(void* object) {
-  user* _this = reinterpret_cast< user* >(object);
+void Snake::ArenaDtor(void* object) {
+  Snake* _this = reinterpret_cast< Snake* >(object);
   (void)_this;
 }
-void user::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+void Snake::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
 }
-void user::SetCachedSize(int size) const {
+void Snake::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
 
-void user::Clear() {
-// @@protoc_insertion_point(message_clear_start:snake_data.user)
+void Snake::Clear() {
+// @@protoc_insertion_point(message_clear_start:snake_data.Snake)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   points_.Clear();
-  name_.ClearToEmpty();
-  owner_flag_ = false;
+  length_ = 0;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* user::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* Snake::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // string name = 1;
+      // int32 length = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_name();
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "snake_data.user.name"));
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          length_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // bool owner_flag = 2;
+      // repeated .snake_data.Coordinate points = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
-          owner_flag_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
-          CHK_(ptr);
-        } else
-          goto handle_unusual;
-        continue;
-      // repeated .snake_data.coordinate points = 3;
-      case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           ptr -= 1;
           do {
             ptr += 1;
             ptr = ctx->ParseMessage(_internal_add_points(), ptr);
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
-          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<26>(ptr));
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<18>(ptr));
         } else
           goto handle_unusual;
         continue;
@@ -905,9 +906,254 @@ failure:
 #undef CHK_
 }
 
-uint8_t* user::_InternalSerialize(
+uint8_t* Snake::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:snake_data.user)
+  // @@protoc_insertion_point(serialize_to_array_start:snake_data.Snake)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // int32 length = 1;
+  if (this->_internal_length() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(1, this->_internal_length(), target);
+  }
+
+  // repeated .snake_data.Coordinate points = 2;
+  for (unsigned int i = 0,
+      n = static_cast<unsigned int>(this->_internal_points_size()); i < n; i++) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(2, this->_internal_points(i), target, stream);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:snake_data.Snake)
+  return target;
+}
+
+size_t Snake::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:snake_data.Snake)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // repeated .snake_data.Coordinate points = 2;
+  total_size += 1UL * this->_internal_points_size();
+  for (const auto& msg : this->points_) {
+    total_size +=
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
+  }
+
+  // int32 length = 1;
+  if (this->_internal_length() != 0) {
+    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32SizePlusOne(this->_internal_length());
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Snake::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
+    Snake::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Snake::GetClassData() const { return &_class_data_; }
+
+void Snake::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
+                      const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+  static_cast<Snake *>(to)->MergeFrom(
+      static_cast<const Snake &>(from));
+}
+
+
+void Snake::MergeFrom(const Snake& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:snake_data.Snake)
+  GOOGLE_DCHECK_NE(&from, this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  points_.MergeFrom(from.points_);
+  if (from._internal_length() != 0) {
+    _internal_set_length(from._internal_length());
+  }
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void Snake::CopyFrom(const Snake& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:snake_data.Snake)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool Snake::IsInitialized() const {
+  return true;
+}
+
+void Snake::InternalSwap(Snake* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  points_.InternalSwap(&other->points_);
+  swap(length_, other->length_);
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata Snake::GetMetadata() const {
+  return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
+      &descriptor_table_snake_5fdata_2eproto_getter, &descriptor_table_snake_5fdata_2eproto_once,
+      file_level_metadata_snake_5fdata_2eproto[3]);
+}
+
+// ===================================================================
+
+class User::_Internal {
+ public:
+  static const ::snake_data::Snake& snake(const User* msg);
+};
+
+const ::snake_data::Snake&
+User::_Internal::snake(const User* msg) {
+  return *msg->snake_;
+}
+User::User(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor();
+  if (!is_message_owned) {
+    RegisterArenaDtor(arena);
+  }
+  // @@protoc_insertion_point(arena_constructor:snake_data.User)
+}
+User::User(const User& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    name_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), "", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (!from._internal_name().empty()) {
+    name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_name(), 
+      GetArenaForAllocation());
+  }
+  if (from._internal_has_snake()) {
+    snake_ = new ::snake_data::Snake(*from.snake_);
+  } else {
+    snake_ = nullptr;
+  }
+  owner_flag_ = from.owner_flag_;
+  // @@protoc_insertion_point(copy_constructor:snake_data.User)
+}
+
+inline void User::SharedCtor() {
+name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  name_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), "", GetArenaForAllocation());
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+    reinterpret_cast<char*>(&snake_) - reinterpret_cast<char*>(this)),
+    0, static_cast<size_t>(reinterpret_cast<char*>(&owner_flag_) -
+    reinterpret_cast<char*>(&snake_)) + sizeof(owner_flag_));
+}
+
+User::~User() {
+  // @@protoc_insertion_point(destructor:snake_data.User)
+  if (GetArenaForAllocation() != nullptr) return;
+  SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+inline void User::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  name_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (this != internal_default_instance()) delete snake_;
+}
+
+void User::ArenaDtor(void* object) {
+  User* _this = reinterpret_cast< User* >(object);
+  (void)_this;
+}
+void User::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
+void User::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+
+void User::Clear() {
+// @@protoc_insertion_point(message_clear_start:snake_data.User)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  name_.ClearToEmpty();
+  if (GetArenaForAllocation() == nullptr && snake_ != nullptr) {
+    delete snake_;
+  }
+  snake_ = nullptr;
+  owner_flag_ = false;
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* User::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // string name = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+          auto str = _internal_mutable_name();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "snake_data.User.name"));
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // bool owner_flag = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
+          owner_flag_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // .snake_data.Snake snake = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
+          ptr = ctx->ParseMessage(_internal_mutable_snake(), ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* User::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:snake_data.User)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -916,7 +1162,7 @@ uint8_t* user::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_name().data(), static_cast<int>(this->_internal_name().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "snake_data.user.name");
+      "snake_data.User.name");
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_name(), target);
   }
@@ -927,42 +1173,42 @@ uint8_t* user::_InternalSerialize(
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(2, this->_internal_owner_flag(), target);
   }
 
-  // repeated .snake_data.coordinate points = 3;
-  for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->_internal_points_size()); i < n; i++) {
+  // .snake_data.Snake snake = 3;
+  if (this->_internal_has_snake()) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(3, this->_internal_points(i), target, stream);
+      InternalWriteMessage(
+        3, _Internal::snake(this), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:snake_data.user)
+  // @@protoc_insertion_point(serialize_to_array_end:snake_data.User)
   return target;
 }
 
-size_t user::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:snake_data.user)
+size_t User::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:snake_data.User)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated .snake_data.coordinate points = 3;
-  total_size += 1UL * this->_internal_points_size();
-  for (const auto& msg : this->points_) {
-    total_size +=
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
-  }
-
   // string name = 1;
   if (!this->_internal_name().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_name());
+  }
+
+  // .snake_data.Snake snake = 3;
+  if (this->_internal_has_snake()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *snake_);
   }
 
   // bool owner_flag = 2;
@@ -973,28 +1219,30 @@ size_t user::ByteSizeLong() const {
   return MaybeComputeUnknownFieldsSize(total_size, &_cached_size_);
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData user::_class_data_ = {
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData User::_class_data_ = {
     ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
-    user::MergeImpl
+    User::MergeImpl
 };
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*user::GetClassData() const { return &_class_data_; }
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*User::GetClassData() const { return &_class_data_; }
 
-void user::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
+void User::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
                       const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-  static_cast<user *>(to)->MergeFrom(
-      static_cast<const user &>(from));
+  static_cast<User *>(to)->MergeFrom(
+      static_cast<const User &>(from));
 }
 
 
-void user::MergeFrom(const user& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:snake_data.user)
+void User::MergeFrom(const User& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:snake_data.User)
   GOOGLE_DCHECK_NE(&from, this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  points_.MergeFrom(from.points_);
   if (!from._internal_name().empty()) {
     _internal_set_name(from._internal_name());
+  }
+  if (from._internal_has_snake()) {
+    _internal_mutable_snake()->::snake_data::Snake::MergeFrom(from._internal_snake());
   }
   if (from._internal_owner_flag() != 0) {
     _internal_set_owner_flag(from._internal_owner_flag());
@@ -1002,51 +1250,58 @@ void user::MergeFrom(const user& from) {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
-void user::CopyFrom(const user& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:snake_data.user)
+void User::CopyFrom(const User& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:snake_data.User)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-bool user::IsInitialized() const {
+bool User::IsInitialized() const {
   return true;
 }
 
-void user::InternalSwap(user* other) {
+void User::InternalSwap(User* other) {
   using std::swap;
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  points_.InternalSwap(&other->points_);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
       &name_, lhs_arena,
       &other->name_, rhs_arena
   );
-  swap(owner_flag_, other->owner_flag_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(User, owner_flag_)
+      + sizeof(User::owner_flag_)
+      - PROTOBUF_FIELD_OFFSET(User, snake_)>(
+          reinterpret_cast<char*>(&snake_),
+          reinterpret_cast<char*>(&other->snake_));
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata user::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata User::GetMetadata() const {
   return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
       &descriptor_table_snake_5fdata_2eproto_getter, &descriptor_table_snake_5fdata_2eproto_once,
-      file_level_metadata_snake_5fdata_2eproto[3]);
+      file_level_metadata_snake_5fdata_2eproto[4]);
 }
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace snake_data
 PROTOBUF_NAMESPACE_OPEN
-template<> PROTOBUF_NOINLINE ::snake_data::board* Arena::CreateMaybeMessage< ::snake_data::board >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::snake_data::board >(arena);
+template<> PROTOBUF_NOINLINE ::snake_data::Board* Arena::CreateMaybeMessage< ::snake_data::Board >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::snake_data::Board >(arena);
 }
-template<> PROTOBUF_NOINLINE ::snake_data::coordinate* Arena::CreateMaybeMessage< ::snake_data::coordinate >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::snake_data::coordinate >(arena);
+template<> PROTOBUF_NOINLINE ::snake_data::Coordinate* Arena::CreateMaybeMessage< ::snake_data::Coordinate >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::snake_data::Coordinate >(arena);
 }
-template<> PROTOBUF_NOINLINE ::snake_data::feed* Arena::CreateMaybeMessage< ::snake_data::feed >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::snake_data::feed >(arena);
+template<> PROTOBUF_NOINLINE ::snake_data::Feed* Arena::CreateMaybeMessage< ::snake_data::Feed >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::snake_data::Feed >(arena);
 }
-template<> PROTOBUF_NOINLINE ::snake_data::user* Arena::CreateMaybeMessage< ::snake_data::user >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::snake_data::user >(arena);
+template<> PROTOBUF_NOINLINE ::snake_data::Snake* Arena::CreateMaybeMessage< ::snake_data::Snake >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::snake_data::Snake >(arena);
+}
+template<> PROTOBUF_NOINLINE ::snake_data::User* Arena::CreateMaybeMessage< ::snake_data::User >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::snake_data::User >(arena);
 }
 PROTOBUF_NAMESPACE_CLOSE
 
