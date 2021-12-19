@@ -2,22 +2,27 @@ syntax = "proto3";
 
 package snake_data;
 
-message board {
-    repeated feed feeds = 1;
-    repeated user users = 2;
+message Board {
+    repeated Feed feeds = 1;
+    repeated User users = 2;
 }
 
-message coordinate {
+message Coordinate {
     int32 x = 1;
     int32 y = 2;
 }
 
-message feed {
-    coordinate point = 1;
+message Feed {
+    Coordinate point = 1;
 }
 
-message user{
+message Snake {
+    int32 length = 1;
+    repeated Coordinate points = 2;
+}
+
+message User{
     string name = 1;
     bool owner_flag = 2;
-    repeated coordinate points = 3;
+    Snake snake = 3;
 }

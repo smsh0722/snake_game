@@ -46,7 +46,7 @@ struct TableStruct_snake_5fdata_2eproto {
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::AuxiliaryParseTableField aux[]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
-  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[4]
+  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[5]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::FieldMetadata field_metadata[];
   static const ::PROTOBUF_NAMESPACE_ID::internal::SerializationTable serialization_table[];
@@ -54,47 +54,51 @@ struct TableStruct_snake_5fdata_2eproto {
 };
 extern const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_snake_5fdata_2eproto;
 namespace snake_data {
-class board;
-struct boardDefaultTypeInternal;
-extern boardDefaultTypeInternal _board_default_instance_;
-class coordinate;
-struct coordinateDefaultTypeInternal;
-extern coordinateDefaultTypeInternal _coordinate_default_instance_;
-class feed;
-struct feedDefaultTypeInternal;
-extern feedDefaultTypeInternal _feed_default_instance_;
-class user;
-struct userDefaultTypeInternal;
-extern userDefaultTypeInternal _user_default_instance_;
+class Board;
+struct BoardDefaultTypeInternal;
+extern BoardDefaultTypeInternal _Board_default_instance_;
+class Coordinate;
+struct CoordinateDefaultTypeInternal;
+extern CoordinateDefaultTypeInternal _Coordinate_default_instance_;
+class Feed;
+struct FeedDefaultTypeInternal;
+extern FeedDefaultTypeInternal _Feed_default_instance_;
+class Snake;
+struct SnakeDefaultTypeInternal;
+extern SnakeDefaultTypeInternal _Snake_default_instance_;
+class User;
+struct UserDefaultTypeInternal;
+extern UserDefaultTypeInternal _User_default_instance_;
 }  // namespace snake_data
 PROTOBUF_NAMESPACE_OPEN
-template<> ::snake_data::board* Arena::CreateMaybeMessage<::snake_data::board>(Arena*);
-template<> ::snake_data::coordinate* Arena::CreateMaybeMessage<::snake_data::coordinate>(Arena*);
-template<> ::snake_data::feed* Arena::CreateMaybeMessage<::snake_data::feed>(Arena*);
-template<> ::snake_data::user* Arena::CreateMaybeMessage<::snake_data::user>(Arena*);
+template<> ::snake_data::Board* Arena::CreateMaybeMessage<::snake_data::Board>(Arena*);
+template<> ::snake_data::Coordinate* Arena::CreateMaybeMessage<::snake_data::Coordinate>(Arena*);
+template<> ::snake_data::Feed* Arena::CreateMaybeMessage<::snake_data::Feed>(Arena*);
+template<> ::snake_data::Snake* Arena::CreateMaybeMessage<::snake_data::Snake>(Arena*);
+template<> ::snake_data::User* Arena::CreateMaybeMessage<::snake_data::User>(Arena*);
 PROTOBUF_NAMESPACE_CLOSE
 namespace snake_data {
 
 // ===================================================================
 
-class board final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:snake_data.board) */ {
+class Board final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:snake_data.Board) */ {
  public:
-  inline board() : board(nullptr) {}
-  ~board() override;
-  explicit constexpr board(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+  inline Board() : Board(nullptr) {}
+  ~Board() override;
+  explicit constexpr Board(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  board(const board& from);
-  board(board&& from) noexcept
-    : board() {
+  Board(const Board& from);
+  Board(Board&& from) noexcept
+    : Board() {
     *this = ::std::move(from);
   }
 
-  inline board& operator=(const board& from) {
+  inline Board& operator=(const Board& from) {
     CopyFrom(from);
     return *this;
   }
-  inline board& operator=(board&& from) noexcept {
+  inline Board& operator=(Board&& from) noexcept {
     if (this == &from) return *this;
     if (GetOwningArena() == from.GetOwningArena()
   #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
@@ -117,20 +121,20 @@ class board final :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const board& default_instance() {
+  static const Board& default_instance() {
     return *internal_default_instance();
   }
-  static inline const board* internal_default_instance() {
-    return reinterpret_cast<const board*>(
-               &_board_default_instance_);
+  static inline const Board* internal_default_instance() {
+    return reinterpret_cast<const Board*>(
+               &_Board_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     0;
 
-  friend void swap(board& a, board& b) {
+  friend void swap(Board& a, Board& b) {
     a.Swap(&b);
   }
-  inline void Swap(board* other) {
+  inline void Swap(Board* other) {
     if (other == this) return;
   #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetOwningArena() != nullptr &&
@@ -143,7 +147,7 @@ class board final :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(board* other) {
+  void UnsafeArenaSwap(Board* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
     InternalSwap(other);
@@ -151,13 +155,13 @@ class board final :
 
   // implements Message ----------------------------------------------
 
-  board* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<board>(arena);
+  Board* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<Board>(arena);
   }
   using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const board& from);
+  void CopyFrom(const Board& from);
   using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom(const board& from);
+  void MergeFrom(const Board& from);
   private:
   static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to, const ::PROTOBUF_NAMESPACE_ID::Message& from);
   public:
@@ -174,15 +178,15 @@ class board final :
   void SharedCtor();
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(board* other);
+  void InternalSwap(Board* other);
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "snake_data.board";
+    return "snake_data.Board";
   }
   protected:
-  explicit board(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+  explicit Board(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                        bool is_message_owned = false);
   private:
   static void ArenaDtor(void* object);
@@ -202,74 +206,74 @@ class board final :
     kFeedsFieldNumber = 1,
     kUsersFieldNumber = 2,
   };
-  // repeated .snake_data.feed feeds = 1;
+  // repeated .snake_data.Feed feeds = 1;
   int feeds_size() const;
   private:
   int _internal_feeds_size() const;
   public:
   void clear_feeds();
-  ::snake_data::feed* mutable_feeds(int index);
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::snake_data::feed >*
+  ::snake_data::Feed* mutable_feeds(int index);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::snake_data::Feed >*
       mutable_feeds();
   private:
-  const ::snake_data::feed& _internal_feeds(int index) const;
-  ::snake_data::feed* _internal_add_feeds();
+  const ::snake_data::Feed& _internal_feeds(int index) const;
+  ::snake_data::Feed* _internal_add_feeds();
   public:
-  const ::snake_data::feed& feeds(int index) const;
-  ::snake_data::feed* add_feeds();
-  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::snake_data::feed >&
+  const ::snake_data::Feed& feeds(int index) const;
+  ::snake_data::Feed* add_feeds();
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::snake_data::Feed >&
       feeds() const;
 
-  // repeated .snake_data.user users = 2;
+  // repeated .snake_data.User users = 2;
   int users_size() const;
   private:
   int _internal_users_size() const;
   public:
   void clear_users();
-  ::snake_data::user* mutable_users(int index);
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::snake_data::user >*
+  ::snake_data::User* mutable_users(int index);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::snake_data::User >*
       mutable_users();
   private:
-  const ::snake_data::user& _internal_users(int index) const;
-  ::snake_data::user* _internal_add_users();
+  const ::snake_data::User& _internal_users(int index) const;
+  ::snake_data::User* _internal_add_users();
   public:
-  const ::snake_data::user& users(int index) const;
-  ::snake_data::user* add_users();
-  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::snake_data::user >&
+  const ::snake_data::User& users(int index) const;
+  ::snake_data::User* add_users();
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::snake_data::User >&
       users() const;
 
-  // @@protoc_insertion_point(class_scope:snake_data.board)
+  // @@protoc_insertion_point(class_scope:snake_data.Board)
  private:
   class _Internal;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::snake_data::feed > feeds_;
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::snake_data::user > users_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::snake_data::Feed > feeds_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::snake_data::User > users_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_snake_5fdata_2eproto;
 };
 // -------------------------------------------------------------------
 
-class coordinate final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:snake_data.coordinate) */ {
+class Coordinate final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:snake_data.Coordinate) */ {
  public:
-  inline coordinate() : coordinate(nullptr) {}
-  ~coordinate() override;
-  explicit constexpr coordinate(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+  inline Coordinate() : Coordinate(nullptr) {}
+  ~Coordinate() override;
+  explicit constexpr Coordinate(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  coordinate(const coordinate& from);
-  coordinate(coordinate&& from) noexcept
-    : coordinate() {
+  Coordinate(const Coordinate& from);
+  Coordinate(Coordinate&& from) noexcept
+    : Coordinate() {
     *this = ::std::move(from);
   }
 
-  inline coordinate& operator=(const coordinate& from) {
+  inline Coordinate& operator=(const Coordinate& from) {
     CopyFrom(from);
     return *this;
   }
-  inline coordinate& operator=(coordinate&& from) noexcept {
+  inline Coordinate& operator=(Coordinate&& from) noexcept {
     if (this == &from) return *this;
     if (GetOwningArena() == from.GetOwningArena()
   #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
@@ -292,20 +296,20 @@ class coordinate final :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const coordinate& default_instance() {
+  static const Coordinate& default_instance() {
     return *internal_default_instance();
   }
-  static inline const coordinate* internal_default_instance() {
-    return reinterpret_cast<const coordinate*>(
-               &_coordinate_default_instance_);
+  static inline const Coordinate* internal_default_instance() {
+    return reinterpret_cast<const Coordinate*>(
+               &_Coordinate_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     1;
 
-  friend void swap(coordinate& a, coordinate& b) {
+  friend void swap(Coordinate& a, Coordinate& b) {
     a.Swap(&b);
   }
-  inline void Swap(coordinate* other) {
+  inline void Swap(Coordinate* other) {
     if (other == this) return;
   #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetOwningArena() != nullptr &&
@@ -318,7 +322,7 @@ class coordinate final :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(coordinate* other) {
+  void UnsafeArenaSwap(Coordinate* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
     InternalSwap(other);
@@ -326,13 +330,13 @@ class coordinate final :
 
   // implements Message ----------------------------------------------
 
-  coordinate* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<coordinate>(arena);
+  Coordinate* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<Coordinate>(arena);
   }
   using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const coordinate& from);
+  void CopyFrom(const Coordinate& from);
   using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom(const coordinate& from);
+  void MergeFrom(const Coordinate& from);
   private:
   static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to, const ::PROTOBUF_NAMESPACE_ID::Message& from);
   public:
@@ -349,15 +353,15 @@ class coordinate final :
   void SharedCtor();
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(coordinate* other);
+  void InternalSwap(Coordinate* other);
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "snake_data.coordinate";
+    return "snake_data.Coordinate";
   }
   protected:
-  explicit coordinate(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+  explicit Coordinate(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                        bool is_message_owned = false);
   private:
   static void ArenaDtor(void* object);
@@ -395,7 +399,7 @@ class coordinate final :
   void _internal_set_y(int32_t value);
   public:
 
-  // @@protoc_insertion_point(class_scope:snake_data.coordinate)
+  // @@protoc_insertion_point(class_scope:snake_data.Coordinate)
  private:
   class _Internal;
 
@@ -409,24 +413,24 @@ class coordinate final :
 };
 // -------------------------------------------------------------------
 
-class feed final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:snake_data.feed) */ {
+class Feed final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:snake_data.Feed) */ {
  public:
-  inline feed() : feed(nullptr) {}
-  ~feed() override;
-  explicit constexpr feed(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+  inline Feed() : Feed(nullptr) {}
+  ~Feed() override;
+  explicit constexpr Feed(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  feed(const feed& from);
-  feed(feed&& from) noexcept
-    : feed() {
+  Feed(const Feed& from);
+  Feed(Feed&& from) noexcept
+    : Feed() {
     *this = ::std::move(from);
   }
 
-  inline feed& operator=(const feed& from) {
+  inline Feed& operator=(const Feed& from) {
     CopyFrom(from);
     return *this;
   }
-  inline feed& operator=(feed&& from) noexcept {
+  inline Feed& operator=(Feed&& from) noexcept {
     if (this == &from) return *this;
     if (GetOwningArena() == from.GetOwningArena()
   #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
@@ -449,20 +453,20 @@ class feed final :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const feed& default_instance() {
+  static const Feed& default_instance() {
     return *internal_default_instance();
   }
-  static inline const feed* internal_default_instance() {
-    return reinterpret_cast<const feed*>(
-               &_feed_default_instance_);
+  static inline const Feed* internal_default_instance() {
+    return reinterpret_cast<const Feed*>(
+               &_Feed_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     2;
 
-  friend void swap(feed& a, feed& b) {
+  friend void swap(Feed& a, Feed& b) {
     a.Swap(&b);
   }
-  inline void Swap(feed* other) {
+  inline void Swap(Feed* other) {
     if (other == this) return;
   #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetOwningArena() != nullptr &&
@@ -475,7 +479,7 @@ class feed final :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(feed* other) {
+  void UnsafeArenaSwap(Feed* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
     InternalSwap(other);
@@ -483,13 +487,13 @@ class feed final :
 
   // implements Message ----------------------------------------------
 
-  feed* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<feed>(arena);
+  Feed* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<Feed>(arena);
   }
   using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const feed& from);
+  void CopyFrom(const Feed& from);
   using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom(const feed& from);
+  void MergeFrom(const Feed& from);
   private:
   static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to, const ::PROTOBUF_NAMESPACE_ID::Message& from);
   public:
@@ -506,15 +510,15 @@ class feed final :
   void SharedCtor();
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(feed* other);
+  void InternalSwap(Feed* other);
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "snake_data.feed";
+    return "snake_data.Feed";
   }
   protected:
-  explicit feed(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+  explicit Feed(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                        bool is_message_owned = false);
   private:
   static void ArenaDtor(void* object);
@@ -533,55 +537,55 @@ class feed final :
   enum : int {
     kPointFieldNumber = 1,
   };
-  // .snake_data.coordinate point = 1;
+  // .snake_data.Coordinate point = 1;
   bool has_point() const;
   private:
   bool _internal_has_point() const;
   public:
   void clear_point();
-  const ::snake_data::coordinate& point() const;
-  PROTOBUF_NODISCARD ::snake_data::coordinate* release_point();
-  ::snake_data::coordinate* mutable_point();
-  void set_allocated_point(::snake_data::coordinate* point);
+  const ::snake_data::Coordinate& point() const;
+  PROTOBUF_NODISCARD ::snake_data::Coordinate* release_point();
+  ::snake_data::Coordinate* mutable_point();
+  void set_allocated_point(::snake_data::Coordinate* point);
   private:
-  const ::snake_data::coordinate& _internal_point() const;
-  ::snake_data::coordinate* _internal_mutable_point();
+  const ::snake_data::Coordinate& _internal_point() const;
+  ::snake_data::Coordinate* _internal_mutable_point();
   public:
   void unsafe_arena_set_allocated_point(
-      ::snake_data::coordinate* point);
-  ::snake_data::coordinate* unsafe_arena_release_point();
+      ::snake_data::Coordinate* point);
+  ::snake_data::Coordinate* unsafe_arena_release_point();
 
-  // @@protoc_insertion_point(class_scope:snake_data.feed)
+  // @@protoc_insertion_point(class_scope:snake_data.Feed)
  private:
   class _Internal;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
-  ::snake_data::coordinate* point_;
+  ::snake_data::Coordinate* point_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_snake_5fdata_2eproto;
 };
 // -------------------------------------------------------------------
 
-class user final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:snake_data.user) */ {
+class Snake final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:snake_data.Snake) */ {
  public:
-  inline user() : user(nullptr) {}
-  ~user() override;
-  explicit constexpr user(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+  inline Snake() : Snake(nullptr) {}
+  ~Snake() override;
+  explicit constexpr Snake(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  user(const user& from);
-  user(user&& from) noexcept
-    : user() {
+  Snake(const Snake& from);
+  Snake(Snake&& from) noexcept
+    : Snake() {
     *this = ::std::move(from);
   }
 
-  inline user& operator=(const user& from) {
+  inline Snake& operator=(const Snake& from) {
     CopyFrom(from);
     return *this;
   }
-  inline user& operator=(user&& from) noexcept {
+  inline Snake& operator=(Snake&& from) noexcept {
     if (this == &from) return *this;
     if (GetOwningArena() == from.GetOwningArena()
   #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
@@ -604,20 +608,20 @@ class user final :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const user& default_instance() {
+  static const Snake& default_instance() {
     return *internal_default_instance();
   }
-  static inline const user* internal_default_instance() {
-    return reinterpret_cast<const user*>(
-               &_user_default_instance_);
+  static inline const Snake* internal_default_instance() {
+    return reinterpret_cast<const Snake*>(
+               &_Snake_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     3;
 
-  friend void swap(user& a, user& b) {
+  friend void swap(Snake& a, Snake& b) {
     a.Swap(&b);
   }
-  inline void Swap(user* other) {
+  inline void Swap(Snake* other) {
     if (other == this) return;
   #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetOwningArena() != nullptr &&
@@ -630,7 +634,7 @@ class user final :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(user* other) {
+  void UnsafeArenaSwap(Snake* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
     InternalSwap(other);
@@ -638,13 +642,13 @@ class user final :
 
   // implements Message ----------------------------------------------
 
-  user* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<user>(arena);
+  Snake* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<Snake>(arena);
   }
   using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const user& from);
+  void CopyFrom(const Snake& from);
   using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom(const user& from);
+  void MergeFrom(const Snake& from);
   private:
   static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to, const ::PROTOBUF_NAMESPACE_ID::Message& from);
   public:
@@ -661,15 +665,15 @@ class user final :
   void SharedCtor();
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(user* other);
+  void InternalSwap(Snake* other);
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "snake_data.user";
+    return "snake_data.Snake";
   }
   protected:
-  explicit user(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+  explicit Snake(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                        bool is_message_owned = false);
   private:
   static void ArenaDtor(void* object);
@@ -686,28 +690,176 @@ class user final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kPointsFieldNumber = 3,
-    kNameFieldNumber = 1,
-    kOwnerFlagFieldNumber = 2,
+    kPointsFieldNumber = 2,
+    kLengthFieldNumber = 1,
   };
-  // repeated .snake_data.coordinate points = 3;
+  // repeated .snake_data.Coordinate points = 2;
   int points_size() const;
   private:
   int _internal_points_size() const;
   public:
   void clear_points();
-  ::snake_data::coordinate* mutable_points(int index);
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::snake_data::coordinate >*
+  ::snake_data::Coordinate* mutable_points(int index);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::snake_data::Coordinate >*
       mutable_points();
   private:
-  const ::snake_data::coordinate& _internal_points(int index) const;
-  ::snake_data::coordinate* _internal_add_points();
+  const ::snake_data::Coordinate& _internal_points(int index) const;
+  ::snake_data::Coordinate* _internal_add_points();
   public:
-  const ::snake_data::coordinate& points(int index) const;
-  ::snake_data::coordinate* add_points();
-  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::snake_data::coordinate >&
+  const ::snake_data::Coordinate& points(int index) const;
+  ::snake_data::Coordinate* add_points();
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::snake_data::Coordinate >&
       points() const;
 
+  // int32 length = 1;
+  void clear_length();
+  int32_t length() const;
+  void set_length(int32_t value);
+  private:
+  int32_t _internal_length() const;
+  void _internal_set_length(int32_t value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:snake_data.Snake)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::snake_data::Coordinate > points_;
+  int32_t length_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_snake_5fdata_2eproto;
+};
+// -------------------------------------------------------------------
+
+class User final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:snake_data.User) */ {
+ public:
+  inline User() : User(nullptr) {}
+  ~User() override;
+  explicit constexpr User(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  User(const User& from);
+  User(User&& from) noexcept
+    : User() {
+    *this = ::std::move(from);
+  }
+
+  inline User& operator=(const User& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline User& operator=(User&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetOwningArena() == from.GetOwningArena()
+  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+        && GetOwningArena() != nullptr
+  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const User& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const User* internal_default_instance() {
+    return reinterpret_cast<const User*>(
+               &_User_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    4;
+
+  friend void swap(User& a, User& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(User* other) {
+    if (other == this) return;
+  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() != nullptr &&
+        GetOwningArena() == other->GetOwningArena()) {
+   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() == other->GetOwningArena()) {
+  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(User* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  User* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<User>(arena);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CopyFrom(const User& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom(const User& from);
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to, const ::PROTOBUF_NAMESPACE_ID::Message& from);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  uint8_t* _InternalSerialize(
+      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(User* other);
+
+  private:
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "snake_data.User";
+  }
+  protected:
+  explicit User(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kNameFieldNumber = 1,
+    kSnakeFieldNumber = 3,
+    kOwnerFlagFieldNumber = 2,
+  };
   // string name = 1;
   void clear_name();
   const std::string& name() const;
@@ -722,6 +874,24 @@ class user final :
   std::string* _internal_mutable_name();
   public:
 
+  // .snake_data.Snake snake = 3;
+  bool has_snake() const;
+  private:
+  bool _internal_has_snake() const;
+  public:
+  void clear_snake();
+  const ::snake_data::Snake& snake() const;
+  PROTOBUF_NODISCARD ::snake_data::Snake* release_snake();
+  ::snake_data::Snake* mutable_snake();
+  void set_allocated_snake(::snake_data::Snake* snake);
+  private:
+  const ::snake_data::Snake& _internal_snake() const;
+  ::snake_data::Snake* _internal_mutable_snake();
+  public:
+  void unsafe_arena_set_allocated_snake(
+      ::snake_data::Snake* snake);
+  ::snake_data::Snake* unsafe_arena_release_snake();
+
   // bool owner_flag = 2;
   void clear_owner_flag();
   bool owner_flag() const;
@@ -731,15 +901,15 @@ class user final :
   void _internal_set_owner_flag(bool value);
   public:
 
-  // @@protoc_insertion_point(class_scope:snake_data.user)
+  // @@protoc_insertion_point(class_scope:snake_data.User)
  private:
   class _Internal;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::snake_data::coordinate > points_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr name_;
+  ::snake_data::Snake* snake_;
   bool owner_flag_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_snake_5fdata_2eproto;
@@ -753,160 +923,160 @@ class user final :
   #pragma GCC diagnostic push
   #pragma GCC diagnostic ignored "-Wstrict-aliasing"
 #endif  // __GNUC__
-// board
+// Board
 
-// repeated .snake_data.feed feeds = 1;
-inline int board::_internal_feeds_size() const {
+// repeated .snake_data.Feed feeds = 1;
+inline int Board::_internal_feeds_size() const {
   return feeds_.size();
 }
-inline int board::feeds_size() const {
+inline int Board::feeds_size() const {
   return _internal_feeds_size();
 }
-inline void board::clear_feeds() {
+inline void Board::clear_feeds() {
   feeds_.Clear();
 }
-inline ::snake_data::feed* board::mutable_feeds(int index) {
-  // @@protoc_insertion_point(field_mutable:snake_data.board.feeds)
+inline ::snake_data::Feed* Board::mutable_feeds(int index) {
+  // @@protoc_insertion_point(field_mutable:snake_data.Board.feeds)
   return feeds_.Mutable(index);
 }
-inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::snake_data::feed >*
-board::mutable_feeds() {
-  // @@protoc_insertion_point(field_mutable_list:snake_data.board.feeds)
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::snake_data::Feed >*
+Board::mutable_feeds() {
+  // @@protoc_insertion_point(field_mutable_list:snake_data.Board.feeds)
   return &feeds_;
 }
-inline const ::snake_data::feed& board::_internal_feeds(int index) const {
+inline const ::snake_data::Feed& Board::_internal_feeds(int index) const {
   return feeds_.Get(index);
 }
-inline const ::snake_data::feed& board::feeds(int index) const {
-  // @@protoc_insertion_point(field_get:snake_data.board.feeds)
+inline const ::snake_data::Feed& Board::feeds(int index) const {
+  // @@protoc_insertion_point(field_get:snake_data.Board.feeds)
   return _internal_feeds(index);
 }
-inline ::snake_data::feed* board::_internal_add_feeds() {
+inline ::snake_data::Feed* Board::_internal_add_feeds() {
   return feeds_.Add();
 }
-inline ::snake_data::feed* board::add_feeds() {
-  ::snake_data::feed* _add = _internal_add_feeds();
-  // @@protoc_insertion_point(field_add:snake_data.board.feeds)
+inline ::snake_data::Feed* Board::add_feeds() {
+  ::snake_data::Feed* _add = _internal_add_feeds();
+  // @@protoc_insertion_point(field_add:snake_data.Board.feeds)
   return _add;
 }
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::snake_data::feed >&
-board::feeds() const {
-  // @@protoc_insertion_point(field_list:snake_data.board.feeds)
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::snake_data::Feed >&
+Board::feeds() const {
+  // @@protoc_insertion_point(field_list:snake_data.Board.feeds)
   return feeds_;
 }
 
-// repeated .snake_data.user users = 2;
-inline int board::_internal_users_size() const {
+// repeated .snake_data.User users = 2;
+inline int Board::_internal_users_size() const {
   return users_.size();
 }
-inline int board::users_size() const {
+inline int Board::users_size() const {
   return _internal_users_size();
 }
-inline void board::clear_users() {
+inline void Board::clear_users() {
   users_.Clear();
 }
-inline ::snake_data::user* board::mutable_users(int index) {
-  // @@protoc_insertion_point(field_mutable:snake_data.board.users)
+inline ::snake_data::User* Board::mutable_users(int index) {
+  // @@protoc_insertion_point(field_mutable:snake_data.Board.users)
   return users_.Mutable(index);
 }
-inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::snake_data::user >*
-board::mutable_users() {
-  // @@protoc_insertion_point(field_mutable_list:snake_data.board.users)
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::snake_data::User >*
+Board::mutable_users() {
+  // @@protoc_insertion_point(field_mutable_list:snake_data.Board.users)
   return &users_;
 }
-inline const ::snake_data::user& board::_internal_users(int index) const {
+inline const ::snake_data::User& Board::_internal_users(int index) const {
   return users_.Get(index);
 }
-inline const ::snake_data::user& board::users(int index) const {
-  // @@protoc_insertion_point(field_get:snake_data.board.users)
+inline const ::snake_data::User& Board::users(int index) const {
+  // @@protoc_insertion_point(field_get:snake_data.Board.users)
   return _internal_users(index);
 }
-inline ::snake_data::user* board::_internal_add_users() {
+inline ::snake_data::User* Board::_internal_add_users() {
   return users_.Add();
 }
-inline ::snake_data::user* board::add_users() {
-  ::snake_data::user* _add = _internal_add_users();
-  // @@protoc_insertion_point(field_add:snake_data.board.users)
+inline ::snake_data::User* Board::add_users() {
+  ::snake_data::User* _add = _internal_add_users();
+  // @@protoc_insertion_point(field_add:snake_data.Board.users)
   return _add;
 }
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::snake_data::user >&
-board::users() const {
-  // @@protoc_insertion_point(field_list:snake_data.board.users)
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::snake_data::User >&
+Board::users() const {
+  // @@protoc_insertion_point(field_list:snake_data.Board.users)
   return users_;
 }
 
 // -------------------------------------------------------------------
 
-// coordinate
+// Coordinate
 
 // int32 x = 1;
-inline void coordinate::clear_x() {
+inline void Coordinate::clear_x() {
   x_ = 0;
 }
-inline int32_t coordinate::_internal_x() const {
+inline int32_t Coordinate::_internal_x() const {
   return x_;
 }
-inline int32_t coordinate::x() const {
-  // @@protoc_insertion_point(field_get:snake_data.coordinate.x)
+inline int32_t Coordinate::x() const {
+  // @@protoc_insertion_point(field_get:snake_data.Coordinate.x)
   return _internal_x();
 }
-inline void coordinate::_internal_set_x(int32_t value) {
+inline void Coordinate::_internal_set_x(int32_t value) {
   
   x_ = value;
 }
-inline void coordinate::set_x(int32_t value) {
+inline void Coordinate::set_x(int32_t value) {
   _internal_set_x(value);
-  // @@protoc_insertion_point(field_set:snake_data.coordinate.x)
+  // @@protoc_insertion_point(field_set:snake_data.Coordinate.x)
 }
 
 // int32 y = 2;
-inline void coordinate::clear_y() {
+inline void Coordinate::clear_y() {
   y_ = 0;
 }
-inline int32_t coordinate::_internal_y() const {
+inline int32_t Coordinate::_internal_y() const {
   return y_;
 }
-inline int32_t coordinate::y() const {
-  // @@protoc_insertion_point(field_get:snake_data.coordinate.y)
+inline int32_t Coordinate::y() const {
+  // @@protoc_insertion_point(field_get:snake_data.Coordinate.y)
   return _internal_y();
 }
-inline void coordinate::_internal_set_y(int32_t value) {
+inline void Coordinate::_internal_set_y(int32_t value) {
   
   y_ = value;
 }
-inline void coordinate::set_y(int32_t value) {
+inline void Coordinate::set_y(int32_t value) {
   _internal_set_y(value);
-  // @@protoc_insertion_point(field_set:snake_data.coordinate.y)
+  // @@protoc_insertion_point(field_set:snake_data.Coordinate.y)
 }
 
 // -------------------------------------------------------------------
 
-// feed
+// Feed
 
-// .snake_data.coordinate point = 1;
-inline bool feed::_internal_has_point() const {
+// .snake_data.Coordinate point = 1;
+inline bool Feed::_internal_has_point() const {
   return this != internal_default_instance() && point_ != nullptr;
 }
-inline bool feed::has_point() const {
+inline bool Feed::has_point() const {
   return _internal_has_point();
 }
-inline void feed::clear_point() {
+inline void Feed::clear_point() {
   if (GetArenaForAllocation() == nullptr && point_ != nullptr) {
     delete point_;
   }
   point_ = nullptr;
 }
-inline const ::snake_data::coordinate& feed::_internal_point() const {
-  const ::snake_data::coordinate* p = point_;
-  return p != nullptr ? *p : reinterpret_cast<const ::snake_data::coordinate&>(
-      ::snake_data::_coordinate_default_instance_);
+inline const ::snake_data::Coordinate& Feed::_internal_point() const {
+  const ::snake_data::Coordinate* p = point_;
+  return p != nullptr ? *p : reinterpret_cast<const ::snake_data::Coordinate&>(
+      ::snake_data::_Coordinate_default_instance_);
 }
-inline const ::snake_data::coordinate& feed::point() const {
-  // @@protoc_insertion_point(field_get:snake_data.feed.point)
+inline const ::snake_data::Coordinate& Feed::point() const {
+  // @@protoc_insertion_point(field_get:snake_data.Feed.point)
   return _internal_point();
 }
-inline void feed::unsafe_arena_set_allocated_point(
-    ::snake_data::coordinate* point) {
+inline void Feed::unsafe_arena_set_allocated_point(
+    ::snake_data::Coordinate* point) {
   if (GetArenaForAllocation() == nullptr) {
     delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(point_);
   }
@@ -916,11 +1086,11 @@ inline void feed::unsafe_arena_set_allocated_point(
   } else {
     
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:snake_data.feed.point)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:snake_data.Feed.point)
 }
-inline ::snake_data::coordinate* feed::release_point() {
+inline ::snake_data::Coordinate* Feed::release_point() {
   
-  ::snake_data::coordinate* temp = point_;
+  ::snake_data::Coordinate* temp = point_;
   point_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
@@ -933,34 +1103,34 @@ inline ::snake_data::coordinate* feed::release_point() {
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::snake_data::coordinate* feed::unsafe_arena_release_point() {
-  // @@protoc_insertion_point(field_release:snake_data.feed.point)
+inline ::snake_data::Coordinate* Feed::unsafe_arena_release_point() {
+  // @@protoc_insertion_point(field_release:snake_data.Feed.point)
   
-  ::snake_data::coordinate* temp = point_;
+  ::snake_data::Coordinate* temp = point_;
   point_ = nullptr;
   return temp;
 }
-inline ::snake_data::coordinate* feed::_internal_mutable_point() {
+inline ::snake_data::Coordinate* Feed::_internal_mutable_point() {
   
   if (point_ == nullptr) {
-    auto* p = CreateMaybeMessage<::snake_data::coordinate>(GetArenaForAllocation());
+    auto* p = CreateMaybeMessage<::snake_data::Coordinate>(GetArenaForAllocation());
     point_ = p;
   }
   return point_;
 }
-inline ::snake_data::coordinate* feed::mutable_point() {
-  ::snake_data::coordinate* _msg = _internal_mutable_point();
-  // @@protoc_insertion_point(field_mutable:snake_data.feed.point)
+inline ::snake_data::Coordinate* Feed::mutable_point() {
+  ::snake_data::Coordinate* _msg = _internal_mutable_point();
+  // @@protoc_insertion_point(field_mutable:snake_data.Feed.point)
   return _msg;
 }
-inline void feed::set_allocated_point(::snake_data::coordinate* point) {
+inline void Feed::set_allocated_point(::snake_data::Coordinate* point) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
     delete point_;
   }
   if (point) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-        ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper<::snake_data::coordinate>::GetOwningArena(point);
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper<::snake_data::Coordinate>::GetOwningArena(point);
     if (message_arena != submessage_arena) {
       point = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, point, submessage_arena);
@@ -970,49 +1140,113 @@ inline void feed::set_allocated_point(::snake_data::coordinate* point) {
     
   }
   point_ = point;
-  // @@protoc_insertion_point(field_set_allocated:snake_data.feed.point)
+  // @@protoc_insertion_point(field_set_allocated:snake_data.Feed.point)
 }
 
 // -------------------------------------------------------------------
 
-// user
+// Snake
+
+// int32 length = 1;
+inline void Snake::clear_length() {
+  length_ = 0;
+}
+inline int32_t Snake::_internal_length() const {
+  return length_;
+}
+inline int32_t Snake::length() const {
+  // @@protoc_insertion_point(field_get:snake_data.Snake.length)
+  return _internal_length();
+}
+inline void Snake::_internal_set_length(int32_t value) {
+  
+  length_ = value;
+}
+inline void Snake::set_length(int32_t value) {
+  _internal_set_length(value);
+  // @@protoc_insertion_point(field_set:snake_data.Snake.length)
+}
+
+// repeated .snake_data.Coordinate points = 2;
+inline int Snake::_internal_points_size() const {
+  return points_.size();
+}
+inline int Snake::points_size() const {
+  return _internal_points_size();
+}
+inline void Snake::clear_points() {
+  points_.Clear();
+}
+inline ::snake_data::Coordinate* Snake::mutable_points(int index) {
+  // @@protoc_insertion_point(field_mutable:snake_data.Snake.points)
+  return points_.Mutable(index);
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::snake_data::Coordinate >*
+Snake::mutable_points() {
+  // @@protoc_insertion_point(field_mutable_list:snake_data.Snake.points)
+  return &points_;
+}
+inline const ::snake_data::Coordinate& Snake::_internal_points(int index) const {
+  return points_.Get(index);
+}
+inline const ::snake_data::Coordinate& Snake::points(int index) const {
+  // @@protoc_insertion_point(field_get:snake_data.Snake.points)
+  return _internal_points(index);
+}
+inline ::snake_data::Coordinate* Snake::_internal_add_points() {
+  return points_.Add();
+}
+inline ::snake_data::Coordinate* Snake::add_points() {
+  ::snake_data::Coordinate* _add = _internal_add_points();
+  // @@protoc_insertion_point(field_add:snake_data.Snake.points)
+  return _add;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::snake_data::Coordinate >&
+Snake::points() const {
+  // @@protoc_insertion_point(field_list:snake_data.Snake.points)
+  return points_;
+}
+
+// -------------------------------------------------------------------
+
+// User
 
 // string name = 1;
-inline void user::clear_name() {
+inline void User::clear_name() {
   name_.ClearToEmpty();
 }
-inline const std::string& user::name() const {
-  // @@protoc_insertion_point(field_get:snake_data.user.name)
+inline const std::string& User::name() const {
+  // @@protoc_insertion_point(field_get:snake_data.User.name)
   return _internal_name();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void user::set_name(ArgT0&& arg0, ArgT... args) {
+void User::set_name(ArgT0&& arg0, ArgT... args) {
  
  name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:snake_data.user.name)
+  // @@protoc_insertion_point(field_set:snake_data.User.name)
 }
-inline std::string* user::mutable_name() {
+inline std::string* User::mutable_name() {
   std::string* _s = _internal_mutable_name();
-  // @@protoc_insertion_point(field_mutable:snake_data.user.name)
+  // @@protoc_insertion_point(field_mutable:snake_data.User.name)
   return _s;
 }
-inline const std::string& user::_internal_name() const {
+inline const std::string& User::_internal_name() const {
   return name_.Get();
 }
-inline void user::_internal_set_name(const std::string& value) {
+inline void User::_internal_set_name(const std::string& value) {
   
   name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
 }
-inline std::string* user::_internal_mutable_name() {
+inline std::string* User::_internal_mutable_name() {
   
   return name_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
 }
-inline std::string* user::release_name() {
-  // @@protoc_insertion_point(field_release:snake_data.user.name)
+inline std::string* User::release_name() {
+  // @@protoc_insertion_point(field_release:snake_data.User.name)
   return name_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
 }
-inline void user::set_allocated_name(std::string* name) {
+inline void User::set_allocated_name(std::string* name) {
   if (name != nullptr) {
     
   } else {
@@ -1025,72 +1259,124 @@ inline void user::set_allocated_name(std::string* name) {
     name_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), "", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:snake_data.user.name)
+  // @@protoc_insertion_point(field_set_allocated:snake_data.User.name)
 }
 
 // bool owner_flag = 2;
-inline void user::clear_owner_flag() {
+inline void User::clear_owner_flag() {
   owner_flag_ = false;
 }
-inline bool user::_internal_owner_flag() const {
+inline bool User::_internal_owner_flag() const {
   return owner_flag_;
 }
-inline bool user::owner_flag() const {
-  // @@protoc_insertion_point(field_get:snake_data.user.owner_flag)
+inline bool User::owner_flag() const {
+  // @@protoc_insertion_point(field_get:snake_data.User.owner_flag)
   return _internal_owner_flag();
 }
-inline void user::_internal_set_owner_flag(bool value) {
+inline void User::_internal_set_owner_flag(bool value) {
   
   owner_flag_ = value;
 }
-inline void user::set_owner_flag(bool value) {
+inline void User::set_owner_flag(bool value) {
   _internal_set_owner_flag(value);
-  // @@protoc_insertion_point(field_set:snake_data.user.owner_flag)
+  // @@protoc_insertion_point(field_set:snake_data.User.owner_flag)
 }
 
-// repeated .snake_data.coordinate points = 3;
-inline int user::_internal_points_size() const {
-  return points_.size();
+// .snake_data.Snake snake = 3;
+inline bool User::_internal_has_snake() const {
+  return this != internal_default_instance() && snake_ != nullptr;
 }
-inline int user::points_size() const {
-  return _internal_points_size();
+inline bool User::has_snake() const {
+  return _internal_has_snake();
 }
-inline void user::clear_points() {
-  points_.Clear();
+inline void User::clear_snake() {
+  if (GetArenaForAllocation() == nullptr && snake_ != nullptr) {
+    delete snake_;
+  }
+  snake_ = nullptr;
 }
-inline ::snake_data::coordinate* user::mutable_points(int index) {
-  // @@protoc_insertion_point(field_mutable:snake_data.user.points)
-  return points_.Mutable(index);
+inline const ::snake_data::Snake& User::_internal_snake() const {
+  const ::snake_data::Snake* p = snake_;
+  return p != nullptr ? *p : reinterpret_cast<const ::snake_data::Snake&>(
+      ::snake_data::_Snake_default_instance_);
 }
-inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::snake_data::coordinate >*
-user::mutable_points() {
-  // @@protoc_insertion_point(field_mutable_list:snake_data.user.points)
-  return &points_;
+inline const ::snake_data::Snake& User::snake() const {
+  // @@protoc_insertion_point(field_get:snake_data.User.snake)
+  return _internal_snake();
 }
-inline const ::snake_data::coordinate& user::_internal_points(int index) const {
-  return points_.Get(index);
+inline void User::unsafe_arena_set_allocated_snake(
+    ::snake_data::Snake* snake) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(snake_);
+  }
+  snake_ = snake;
+  if (snake) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:snake_data.User.snake)
 }
-inline const ::snake_data::coordinate& user::points(int index) const {
-  // @@protoc_insertion_point(field_get:snake_data.user.points)
-  return _internal_points(index);
+inline ::snake_data::Snake* User::release_snake() {
+  
+  ::snake_data::Snake* temp = snake_;
+  snake_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
 }
-inline ::snake_data::coordinate* user::_internal_add_points() {
-  return points_.Add();
+inline ::snake_data::Snake* User::unsafe_arena_release_snake() {
+  // @@protoc_insertion_point(field_release:snake_data.User.snake)
+  
+  ::snake_data::Snake* temp = snake_;
+  snake_ = nullptr;
+  return temp;
 }
-inline ::snake_data::coordinate* user::add_points() {
-  ::snake_data::coordinate* _add = _internal_add_points();
-  // @@protoc_insertion_point(field_add:snake_data.user.points)
-  return _add;
+inline ::snake_data::Snake* User::_internal_mutable_snake() {
+  
+  if (snake_ == nullptr) {
+    auto* p = CreateMaybeMessage<::snake_data::Snake>(GetArenaForAllocation());
+    snake_ = p;
+  }
+  return snake_;
 }
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::snake_data::coordinate >&
-user::points() const {
-  // @@protoc_insertion_point(field_list:snake_data.user.points)
-  return points_;
+inline ::snake_data::Snake* User::mutable_snake() {
+  ::snake_data::Snake* _msg = _internal_mutable_snake();
+  // @@protoc_insertion_point(field_mutable:snake_data.User.snake)
+  return _msg;
+}
+inline void User::set_allocated_snake(::snake_data::Snake* snake) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete snake_;
+  }
+  if (snake) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper<::snake_data::Snake>::GetOwningArena(snake);
+    if (message_arena != submessage_arena) {
+      snake = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, snake, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  snake_ = snake;
+  // @@protoc_insertion_point(field_set_allocated:snake_data.User.snake)
 }
 
 #ifdef __GNUC__
   #pragma GCC diagnostic pop
 #endif  // __GNUC__
+// -------------------------------------------------------------------
+
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------
